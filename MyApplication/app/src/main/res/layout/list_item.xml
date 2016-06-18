@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="60dp" >
+    <ImageView
+        android:src="@drawable/report"
+        android:id="@+id/icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="aaaaaaaa"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <TextView
+        android:text="aaaaaaaaaaaaaa"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:textColor="#CC0033"
+        android:textSize="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/icon"
+        android:layout_above="@+id/date"
+        android:textStyle="bold" />
+
+    <TextView
+        android:text="aaaaaaaaaaaaaa"
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:textColor="#3399FF"
+        android:textSize="14dp"
+        android:layout_alignBottom="@+id/icon"
+        android:layout_toRightOf="@+id/icon"
+        android:layout_toEndOf="@+id/icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/money"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/title"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/date"
+        android:gravity="center_vertical|right"
+        android:layout_toRightOf="@+id/title" />
+</RelativeLayout>
