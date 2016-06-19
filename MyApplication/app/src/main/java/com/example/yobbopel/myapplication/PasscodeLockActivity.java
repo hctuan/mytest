@@ -142,10 +142,4 @@ public class PasscodeLockActivity extends Activity {
         finish();
     }
 
-    private static PasscodeLockActivity passActivity = null;
-
-    public static PasscodeLockActivity getPasscodeActivity() {
-        return passActivity;
-    }
-
 }

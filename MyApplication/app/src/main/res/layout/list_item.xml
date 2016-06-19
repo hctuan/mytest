@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="60dp"
+    android:layout_height="@dimen/item_listview_size"
     android:background="@color/day_disabled_background_color">
     <ImageView
         android:src="@drawable/report"
         android:id="@+id/icon"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/item_listview_size"
+        android:layout_height="@dimen/item_listview_size"
         android:contentDescription="aaaaaaaa"
         android:paddingLeft="10dp"
         android:paddingRight="10dp" />
@@ -38,15 +38,41 @@
         android:layout_toEndOf="@+id/icon" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/money"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/title"
+        android:text="TextView visible"
+        android:background="@color/colorAccent"
+        android:layout_width="1dp"
+        android:layout_height="@dimen/item_listview_size"
+        android:id="@+id/txt_visible"
         android:layout_alignParentTop="true"
-        android:layout_alignBottom="@+id/date"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/item_listview_size"
+        android:text="New Text"
         android:gravity="center_vertical|right"
-        android:layout_toRightOf="@+id/title" />
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/img_edit"
+        android:layout_toStartOf="@+id/img_edit" />
+
+    <ImageView
+        android:visibility="gone"
+        android:src="@drawable/edit"
+        android:layout_width="@dimen/item_listview_size"
+        android:layout_height="@dimen/item_listview_size"
+        android:id="@+id/img_edit"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/img_delete"
+        android:layout_toStartOf="@+id/img_delete" />
+    <ImageView
+        android:visibility="gone"
+        android:src="@drawable/delete"
+        android:layout_width="@dimen/item_listview_size"
+        android:layout_height="@dimen/item_listview_size"
+        android:id="@+id/img_delete"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/txt_visible"
+        android:layout_toStartOf="@+id/txt_visible" />
 </RelativeLayout>
