@@ -107,7 +107,7 @@ public class MainActivity extends ActionBarActivity implements
         imgDelete.setBackgroundColor(getResources().getColor(R.color.colorAccent));
         imgEdit.setVisibility(View.VISIBLE);
         imgEdit.setBackgroundColor(getResources().getColor(R.color.colorGray));
-        Toast.makeText(this, "long clicked pos: " + imgDelete.toString(), Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, "long clicked pos: " , Toast.LENGTH_LONG).show();
         return false;
     }
 }

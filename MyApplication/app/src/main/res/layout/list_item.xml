@@ -13,29 +13,29 @@
         android:paddingRight="10dp" />
 
     <TextView
-        android:text="aaaaaaaaaaaaaa"
+        android:text="date of take pay"
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorGray"
+        android:textSize="12dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/icon"
+        android:layout_toEndOf="@+id/icon" />
+
+    <TextView
+        android:text="Title for take and pay"
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="10dp"
-        android:textColor="#CC0033"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="16dp"
-        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        android:paddingTop="8dp"
         android:layout_toRightOf="@+id/icon"
-        android:layout_above="@+id/date"
-        android:textStyle="bold" />
-
-    <TextView
-        android:text="aaaaaaaaaaaaaa"
-        android:id="@+id/date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:textColor="#3399FF"
-        android:textSize="14dp"
-        android:layout_alignBottom="@+id/icon"
-        android:layout_toRightOf="@+id/icon"
-        android:layout_toEndOf="@+id/icon" />
+        android:layout_toEndOf="@+id/icon"
+        android:layout_alignParentTop="true" />
 
     <TextView
         android:text="TextView visible"
@@ -55,7 +55,8 @@
         android:gravity="center_vertical|right"
         android:layout_alignParentTop="true"
         android:layout_toLeftOf="@+id/img_edit"
-        android:layout_toStartOf="@+id/img_edit" />
+        android:layout_toStartOf="@+id/img_edit"
+        android:paddingRight="8dp"/>
 
     <ImageView
         android:visibility="gone"
@@ -65,7 +66,8 @@
         android:id="@+id/img_edit"
         android:layout_alignParentTop="true"
         android:layout_toLeftOf="@+id/img_delete"
-        android:layout_toStartOf="@+id/img_delete" />
+        android:layout_toStartOf="@+id/img_delete"
+        android:padding="15dp"/>
     <ImageView
         android:visibility="gone"
         android:src="@drawable/delete"
@@ -74,5 +76,6 @@
         android:id="@+id/img_delete"
         android:layout_alignParentTop="true"
         android:layout_toLeftOf="@+id/txt_visible"
-        android:layout_toStartOf="@+id/txt_visible" />
+        android:layout_toStartOf="@+id/txt_visible"
+        android:padding="15dp"/>
 </RelativeLayout>
