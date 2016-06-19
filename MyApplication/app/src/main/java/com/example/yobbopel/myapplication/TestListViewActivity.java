@@ -1,13 +1,15 @@
 package com.example.yobbopel.myapplication;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.example.yobbopel.myapplication.Objects.Item;
+import com.example.yobbopel.myapplication.adapter.ItemAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.yobbopel.myapplication;
+package com.example.yobbopel.myapplication.Objects;
 
 /**
  * Created by YobboPEL on 18/06/2016.

@@ -1,6 +1,5 @@
-package com.example.yobbopel.myapplication;
+package com.example.yobbopel.myapplication.adapter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
@@ -11,6 +10,10 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.yobbopel.myapplication.Objects.Item;
+import com.example.yobbopel.myapplication.R;
+
 /**
  * Created by YobboPEL on 18/06/2016.
  */

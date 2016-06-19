@@ -1,22 +1,25 @@
 package com.example.yobbopel.myapplication;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.example.yobbopel.myapplication.Objects.Item;
+import com.example.yobbopel.myapplication.adapter.ItemAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends Activity implements AdapterView.OnItemClickListener {
+public class MainActivity extends ActionBarActivity implements
+        AdapterView.OnItemClickListener {
 
-    ListView listView;
-    List<ItemTakePay> rowItems;
     public static final String[] titles = new String[] { "Strawberry",
             "Banana", "Orange", "Mixed" };
 
@@ -28,27 +31,28 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
     public static final Integer[] images = { R.drawable.report,
             R.drawable.report, R.drawable.report, R.drawable.report };
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    ListView listView;
+    List<Item> rowItems;
 
-        rowItems = new ArrayList<ItemTakePay>();
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_test_list_view);
+
+        rowItems = new ArrayList<Item>();
         for (int i = 0; i < titles.length; i++) {
-            ItemTakePay item = new ItemTakePay(images[i], titles[i], descriptions[i], 123456);
+            Item item = new Item(images[i], titles[i], descriptions[i]);
             rowItems.add(item);
         }
 
         listView = (ListView) findViewById(R.id.list);
-        AdapterItemTakePay adapter = new AdapterItemTakePay(this,
-                R.layout.item_take_pay_layout, rowItems);
+        ItemAdapter adapter = new ItemAdapter(this,
+                R.layout.list_item, rowItems);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
-
-
-
-        //Toast.makeText(MainActivity.this, item.get(0).getTitle(), Toast.LENGTH_LONG).show();
     }
+
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position,
                             long id) {
@@ -57,5 +61,27 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
                 Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
         toast.show();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.action_main,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle presses on the action bar items
+        switch (item.getItemId()) {
+            case R.id.action_insert:
+                insert();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void insert() {
+        Toast.makeText(this, "You click insert", Toast.LENGTH_SHORT).show();
     }
 }
