@@ -1,4 +1,4 @@
-package com.example.yobbopel.myapplication;
+package com.example.tuanhuynh.qwallet;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,8 +11,7 @@ import android.widget.GridView;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import com.example.yobbopel.myapplication.adapter.CustomAdapterPasscode;
-
+import com.example.tuanhuynh.qwallet.adapter.CustomAdapterPasscode;
 
 public class PasscodeLockActivity extends Activity {
 

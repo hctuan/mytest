@@ -1,4 +1,4 @@
-package com.example.yobbopel.myapplication.adapter;
+package com.example.tuanhuynh.qwallet.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.example.yobbopel.myapplication.R;
+import com.example.tuanhuynh.qwallet.R;
 
 /**
  * Created by tuan.huynh on 6/16/2016.
